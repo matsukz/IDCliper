@@ -10,6 +10,8 @@ import json
 root = tkinter.Tk()
 root.title("Cliper")
 root.geometry("300x400")
+root.resizable(0,0)
+root.attributes("-topmost", True)
 
 Json_Path = ""
 Executable = False
