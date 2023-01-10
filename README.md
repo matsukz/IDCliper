@@ -26,6 +26,6 @@
 
 
 ## 参考
-[【コマンドプロンプト】クリップボードの読み込みと書き出し](https://syutaku.blog/win-cmd-clipboard/)（閲覧日2023年1月10日）
-[(tkinter)ボタンをクリックすると、ラベルの文字が変わる](https://takajaramin.com/2020/02/button_click_label_change/#i-9)（閲覧日2023年1月10日）
-[Pythonでtry exceptの書き方と、エラー内容の取得方法](https://symfoware.blog.fc2.com/blog-entry-873.html)（閲覧日2023年1月10日）
+[【コマンドプロンプト】クリップボードの読み込みと書き出し](https://syutaku.blog/win-cmd-clipboard/)（閲覧日2023年1月10日）<br>
+[(tkinter)ボタンをクリックすると、ラベルの文字が変わる](https://takajaramin.com/2020/02/button_click_label_change/#i-9)（閲覧日2023年1月10日）<br>
+[Pythonでtry exceptの書き方と、エラー内容の取得方法](https://symfoware.blog.fc2.com/blog-entry-873.html)（閲覧日2023年1月10日）<br>
