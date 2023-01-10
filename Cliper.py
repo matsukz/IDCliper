@@ -133,10 +133,16 @@ Check_Json_button.place(x=30,y=90)
 def ExeIDCopy():
     print(Executable)
     if Executable == True:
-        subprocess.run(
-            "set /p cmdtmp=\"" + ImpJson["Main"]["StudentID"] + "\"< nul | clip",
-            shell=True
-        )
+        try:
+            subprocess.run(
+                "set /p cmdtmp=\"" + ImpJson["Main"]["StudentID"] + "\"< nul | clip",
+                shell=True
+            )
+        except KeyError:
+            tkinter.messagebox.showerror(
+                "エラー",
+                "設定ファイルに異常があります"
+            )
     else:
         tkinter.messagebox.showerror(
             "エラー",
@@ -154,10 +160,16 @@ ExeIDCopy_Button.place(x=30,y=180)
 def ExePWCopy():
     print(Executable)
     if Executable == True:
-        subprocess.run(
-            "set /p cmdtmp=\"" + ImpJson["Main"]["PassWord"] + "\"< nul | clip",
-            shell=True
-        )
+        try:
+            subprocess.run(
+                "set /p cmdtmp=\"" + ImpJson["Main"]["PassWord"] + "\"< nul | clip",
+                shell=True
+            )
+        except KeyError:
+            tkinter.messagebox.showerror(
+                "エラー",
+                "設定ファイルに異常があります"
+            )
     else:
         tkinter.messagebox.showerror(
             "エラー",
@@ -175,10 +187,16 @@ ExePWCopy_Button.place(x=30,y=250)
 def ExeMACopy():
     print(Executable)
     if Executable == True:
-        subprocess.run(
-            "set /p cmdtmp=\"" + ImpJson["Main"]["MailAddress"] + "\"< nul | clip",
-            shell=True
-        )
+        try:
+            subprocess.run(
+                "set /p cmdtmp=\"" + ImpJson["Main"]["MailAddress"] + "\"< nul | clip",
+                shell=True
+            )
+        except KeyError:
+            tkinter.messagebox.showerror(
+                "エラー",
+                "設定ファイルに異常があります"
+            )
     else:
         tkinter.messagebox.showerror(
             "エラー",
