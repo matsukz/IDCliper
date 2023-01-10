@@ -1,0 +1,11 @@
+{
+    "Check":{
+        "CheckSum":"True"
+    },
+
+    "Main":{
+        "StudentID":"",
+        "PassWord":"",
+        "MailAddress":""
+    }
+}
