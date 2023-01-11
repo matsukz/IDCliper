@@ -19,7 +19,7 @@ ImpJson = ""
 
 JsonText = tkinter.Label(
     root,
-    text="・設定ファイルの場所",
+    text="設定ファイルの場所",
     font=(
         "",
         "10",
@@ -141,7 +141,7 @@ def ExeIDCopy():
         except KeyError:
             tkinter.messagebox.showerror(
                 "エラー",
-                "設定ファイルに異常があります"
+                "設定ファイルが破損しています"
             )
     else:
         tkinter.messagebox.showerror(
@@ -168,7 +168,7 @@ def ExePWCopy():
         except KeyError:
             tkinter.messagebox.showerror(
                 "エラー",
-                "設定ファイルに異常があります"
+                "設定ファイルが破損しています"
             )
     else:
         tkinter.messagebox.showerror(
@@ -195,7 +195,7 @@ def ExeMACopy():
         except KeyError:
             tkinter.messagebox.showerror(
                 "エラー",
-                "設定ファイルに異常があります"
+                "設定ファイルが破損しています"
             )
     else:
         tkinter.messagebox.showerror(
