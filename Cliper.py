@@ -9,7 +9,7 @@ import json
 
 root = tkinter.Tk()
 root.title("Cliper")
-root.geometry("300x400")
+root.geometry("300x400+1000+50")
 root.resizable(0,0)
 root.attributes("-topmost", True)
 
@@ -153,7 +153,7 @@ def ExeIDCopy():
     else:
         tkinter.messagebox.showerror(
             "エラー",
-            "実行許可がありません\n解決方法：設定ファイルをロードする。"
+            "実行許可がありません \n 解決方法：設定ファイルをロードする。"
         )
 
 ExeIDCopy_Button = tkinter.Button(
@@ -180,7 +180,7 @@ def ExePWCopy():
     else:
         tkinter.messagebox.showerror(
             "エラー",
-            "実行許可がありません\n解決方法：設定ファイルをロードする。"
+            "実行許可がありません \n 解決方法：設定ファイルをロードする。"
         )
 
 ExePWCopy_Button = tkinter.Button(
@@ -202,12 +202,12 @@ def ExeMACopy():
         except KeyError:
             tkinter.messagebox.showerror(
                 "エラー",
-                "設定ファイルが破損しています\n解決方法：設定ファイルをロードする。"
+                "設定ファイルが破損しています \n 解決方法：設定ファイルをロードする。"
             )
     else:
         tkinter.messagebox.showerror(
             "エラー",
-            "実行許可がありません\n解決方法：設定ファイルをロードする。"
+            "実行許可がありません"
         )
 
 ExeMACopy_Button = tkinter.Button(
