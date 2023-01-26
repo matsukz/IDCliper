@@ -92,13 +92,20 @@ def JsonCheck():
 
     if not Json_Path == "":
 
-        ImpJson = json.load(
-            open(
-                Json_Path,
-                "r",
-                encoding="utf-8"
+        try:
+            ImpJson = json.load(
+                open(
+                    Json_Path,
+                    "r",
+                    encoding="utf-8"
+                )
             )
-        )
+        except FileNotFoundError:
+            tkinter.messagebox.showerror(
+                "エラー",
+                "ファイルパスに誤りがあります"
+            )
+            return
         try:
             if ImpJson["Check"]["CheckSum"] == "True":
                 Executable = True
@@ -106,13 +113,13 @@ def JsonCheck():
             else:
                 tkinter.messagebox.showerror(
                     "エラー",
-                    "この設定ファイルは使用できません"
+                    "この設定ファイルは使用できません \n 解決方法：正規の設定ファイルをGitHubから入手する。"
                 )
                 Check_Ready["text"] = "状態：設定ファイルの待機中"
         except KeyError:
             tkinter.messagebox.showerror(
                 "エラー",
-                "この設定ファイルは使用できません"
+                "この設定ファイルは使用できません　\n 解決方法：正規の設定ファイルをGitHubから入手する。"
             )
             Check_Ready["text"] = "状態：設定ファイルの待機中"
             
@@ -146,7 +153,7 @@ def ExeIDCopy():
     else:
         tkinter.messagebox.showerror(
             "エラー",
-            "実行許可がありません"
+            "実行許可がありません\n解決方法：設定ファイルをロードする。"
         )
 
 ExeIDCopy_Button = tkinter.Button(
@@ -173,7 +180,7 @@ def ExePWCopy():
     else:
         tkinter.messagebox.showerror(
             "エラー",
-            "実行許可がありません"
+            "実行許可がありません\n解決方法：設定ファイルをロードする。"
         )
 
 ExePWCopy_Button = tkinter.Button(
@@ -195,12 +202,12 @@ def ExeMACopy():
         except KeyError:
             tkinter.messagebox.showerror(
                 "エラー",
-                "設定ファイルが破損しています"
+                "設定ファイルが破損しています\n解決方法：設定ファイルをロードする。"
             )
     else:
         tkinter.messagebox.showerror(
             "エラー",
-            "実行許可がありません"
+            "実行許可がありません\n解決方法：設定ファイルをロードする。"
         )
 
 ExeMACopy_Button = tkinter.Button(
